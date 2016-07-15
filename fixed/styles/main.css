@@ -19,6 +19,7 @@ em {
 
 .blueBox {
     background: #627da0;
+    position: fixed;
 }
 
 .greenBox {
