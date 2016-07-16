@@ -1,3 +1,200 @@
 /* CSS Document for Screens */
 
+/*@import must be the first item in the CSS file*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,700,700italic);
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	color: #555;
+	margin:0;
+	padding: 0;
+}
+
+#page{
+	/*elements cannot scale larger than 1200px page wdith. They stay centered within browser */
+	max-width: 1200px;
+	/*top/bottom right/left*/
+	margin: 0 auto;
+	position: relative;
+}
+
+/*Text*/
+
+h1{
+	margin: 0 0 1em 0;
+	font-size: 2.8em;
+	font-weight: 700;
+}
+
+h2{
+	margin: 0 0 .5em 0;
+	font-size: 1.6em;
+	font-weight: 700;
+	line-height: 1.1em;
+}
+
+h3{
+	margin: 0 0 .5em 0;
+	font-size: 1.3em;
+	font-weight: 700;
+}
+
+h4{
+	margin: 0 0 1.5em 0;
+	font-size: 1em;
+	font-weight: 700;
+}
+
+p{
+	margin: 0 0 1em 0;
+}
+
+a{
+	color: #007eff;
+}
+
+a:visited{
+	color:  #65b1ff;
+}
+
+a.btn{
+	font-size: 1.2em;
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 4px 15px;
+	/*animates the hover style*/
+	transition: background-color .5s; 	
+}
+
+/*hover is known as a pesudo class*/
+a.btn:hover{
+	background-color: rgba(0,0,0,.3);
+}
+
+
+/*Header*/
+
+header{
+	height:430px;
+	/*banner sizes 1200x430 825x300 625x160 425x110*/
+	background: #cf0004 url(../img/banner_1200.jpg) no-repeat center bottom;
+	/*anything within the banner will be positioned relative to it*/
+	position:relative;
+}
+
+header a.logo{
+	position: absolute;
+	/*by default anchor tags have inline styling, which means they don't have any dimensions*/
+	display:block;
+	width: 160px;
+	height: 66px;
+	/*0=x, 0=y positions graphic in the upper left corner of the a.logo element*/
+	background: url(../img/logo.svg) no-repeat 0 0;
+	/*background will be sized to the height and width porportion to that of the logoimage we set*/
+	background-size: contain;
+	top: 15px;
+	left: 15px;
+}
+
+header a.logo span{
+	/*this hides the text and link of the everyday things*/
+	display:none;
+}
+
+header div.hero{
+	position: absolute;
+	width: 42%;
+	top: 130px;
+	left: 55%;	
+}
+
+header div.hero h1{
+	line-height: 1em;
+	margin: 0 0 30px 0;
+	color: #fff;
+}
+
+/*Section - All*/
+section{
+	padding: 0 30px;
+}
+
+/*this is our pseudo element to clear aside floats so parent element section main wraps around them*/
+section::after{
+	content:'';
+	display: block;
+	clear: both;
+}
+
+
+/*Section - Main*/
+
+section.main{
+	 margin-top: 20px;
+	 margin-bottom: 30px;
+	 padding: 0;
+}
+
+section.main aside{
+	width: 33%;
+	float: left;
+	text-align: center;
+}
+
+section.main .content{
+	margin: 15px;
+	background: no-repeat center top;
+	background-size: 75px 75px;
+	/*pushes text down to display background image icon behind it*/
+	padding-top: 85px;
+}
+
+section.main aside h3 a {
+	color: #000;
+	text-decoration: none;
+}
+
+section.main aside h3 a:hover{
+	text-decoration: underline;
+}
+
+section.main aside .content.trending{
+	background-image: url(../img/icon_star.svg)
+}
+
+section.main aside .content.find-it{
+	background-image: url(../img/icon_marker.svg)
+}
+
+section.main aside .content.tools{
+	background-image: url(../img/icon_gear.svg)
+}
+
+/*Section - Atmosphere*/
+section.atmosphere{
+	background-color: #cc6633;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	color: #fff;
+}
+
+section.atmosphere article{
+	padding: 0 20px 0 515px;
+	background: url(../img/photo_lounge.jpg) no-repeat 0 5px;
+	min-height: 220px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
