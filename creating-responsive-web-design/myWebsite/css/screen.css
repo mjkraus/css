@@ -187,6 +187,131 @@ section.atmosphere article{
 	min-height: 220px;
 }
 
+/*Section - How To*/
+
+section.how-to{
+	background-color: #eee9d9;
+	position: relative;
+}
+
+section.how-to aside{
+	width: 30%;
+	float: left;
+	margin-right: 10px;
+}
+
+section.how-to aside .content img{ 
+	/*img default is inline block which takes up some dimensions, block wont allow anything to left of it.
+	pushes everything down*/
+	display: block;
+	margin-bottom: 15px;
+	/*images scale depending on browser size*/
+	width: 70%;	
+}
+
+section.how-to aside .content h4{
+	margin-bottom: 0;
+}
+
+section.how-to aside .content p{
+	margin-bottom: 0.5em;
+}
+
+section.how-to aside .content a{
+	display: inline-block;
+	color: #cc6633;
+	font-weight: 700;
+}
+
+section.how-to blockquote{
+	margin: 0;
+	width: 32%;
+	color: #444;
+	background-color: #fff;
+	position: absolute;
+	/*the bottom set to 0 has this white div match up with the top of the div below*/
+	bottom: 0;
+	right: 4px;
+}
+
+section.how-to blockquote p{
+	margin: 30px 30px 20px 50px;
+}
+
+section.how-to blockquote p.quote{
+	font-style: italic;
+	font-size: 1.2em;
+}
+
+section.how-to blockquote p.credit{
+	color: #777;
+	font-size: .9em;
+	margin-top: 0;
+	padding-left: 20px;
+	line-height: 1.3em;
+	/*we will be absolute positioning a pseudo element inside this relative positioned element*/
+	position: relative;
+}
+
+/*large quote mark for blockquote*/
+section.how-to blockquote::before{
+	/*set extra margin in p tag so we have extra space in the background for the quote*/
+	/*unicode character for left double quote. left off the U+ in U+201C*/
+	content: '\201c'; 
+	color: #d2bd65;
+	position:absolute;
+	top: 10px;
+	left: 8px;
+	font-size: 5em;
+	font-family: serif;
+}
+
+section.how-to blockquote p.quote::after{
+	content: '\201d';
+	font-family: serif;
+}
+
+section.how-to blockquote p.credit::before{
+	content:'\2014';
+	position: absolute;
+	top: -1;
+	left: 0;
+}
+
+/*footer*/
+footer{
+	font-size: .8em;
+	margin: 40px;
+	color: #999;
+}
+
+footer .content{
+	/*content displays in the same row as if they are their on p tags*/
+	display: inline;
+}
+
+footer a{
+	margin-left:30px;
+	color:#777;
+
+}
+
+footer a:visited{
+	color:#777;
+}
+
+footer a:hover{
+	color:#000;
+}
+
+
+
+
+
+
+
+
+
 
 
 
