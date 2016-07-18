@@ -365,6 +365,35 @@ nav ul ul ul {
  	padding: 10px 20px 15px 20px;
  }
 
+/*this creates indication arrows*/
+/*looking for a css rule that does have this attribute*/
+ nav a[aria-haspopup="true"]::after{
+ 	content:'';
+ 	display: block;
+ 	width: 0px;
+ 	height: 0px;
+ 	position: absolute;
+	top: 16px;
+	right: 15px;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	border-left: 4px solid #fff;
+ }
+
+/*dont need to define contact element because it already has a pseudo element, 
+this is specific to direct children of this element. Only need to change the border positioning of this 
+element. This creates a down arrow under UL elements in the nav*/
+ nav > ul > li > a[aria-haspopup="true"]::after{
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid #fff;	
+	left: 20px;
+	/*this overrides the */
+	right:auto;
+	bottom: 6px;
+	top: auto; 	
+ }
+
 
 
 
