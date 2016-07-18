@@ -3,6 +3,7 @@
 /*@import must be the first item in the CSS file*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,700,700italic);
 
+/*with positioning, items earlier in the document appear behind items later in the document*/
 body{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
@@ -86,6 +87,8 @@ header{
 }
 
 header a.logo{
+	/*positions logo infront of header bar*/
+	z-index: 1;
 	position: absolute;
 	/*by default anchor tags have inline styling, which means they don't have any dimensions*/
 	display:block;
@@ -278,6 +281,93 @@ section.how-to blockquote p.credit::before{
 	left: 0;
 }
 
+/*Navigation*/
+nav {
+	background-color: rgba(0,0,0,.65);
+	position: absolute;
+	/*navigation positions within the page element, so moves to the top*/
+	top: 0px;
+	left: 0px;
+	padding: 50px 0 0 0;
+	width: 100%;
+}
+
+/*all top level items and carries with them their nested ul elements*/
+nav::after{
+	content:'';
+	display: block;
+	clear: both;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0px;
+}
+
+nav ul li:hover{
+	background-color: #2b0306;
+}
+
+nav ul li:hover > ul{
+	display: block;
+}
+
+nav ul li a {
+	display: inline-block;
+	color: #fff;
+	padding: 10px 20px;
+	text-decoration: none;
+	width: 125px;
+	position: relative;
+}
+
+nav ul li a:visited{
+	color: #fff;
+}
+
+nav ul li a:hover{
+	background-color: #6d0911;
+}
+
+/*position nest ul so it appears under the ul items, but we dont want the main nav
+element to wrap around and cover the entire ul item*/
+nav ul ul {
+	position: absolute;
+	top: 100%;
+	background-color: #2b0306;
+	/*hides all the nest ul items*/
+	display: none;
+}
+
+nav ul ul li {
+	position: relative;
+}
+
+nav ul ul ul {
+	left: 100%;
+	top: 0px;
+}
+
+ /*top-level*/
+ /* only targets unordered list if it is immediately the child of a navigation element*/
+ nav > ul{
+ 	padding-left: 200px;
+ }
+
+ nav > ul > li{
+ 	float: left;
+ }
+
+ nav > ul > li > a{
+ 	/* this width for the dropdown menu now overrides the predefined 120px for the elements in the nav bar.*/
+ 	width: auto;
+ 	padding: 10px 20px 15px 20px;
+ }
+
+
+
+
 /*footer*/
 footer{
 	font-size: .8em;
@@ -286,7 +376,7 @@ footer{
 }
 
 footer .content{
-	/*content displays in the same row as if they are their on p tags*/
+	/*content displays in the same row as if they are their on p tagst */
 	display: inline;
 }
 
