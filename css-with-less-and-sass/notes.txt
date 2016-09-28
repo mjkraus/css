@@ -1,0 +1,39 @@
+Disadvantages of CSS
+
+* No way to specify variables
+	* values that are defined once and then re-used throughout a style sheet
+
+* No way to define and re-use common style rules
+
+* No way to make minor adjustments by customizing style rules with different values
+
+* No way to perform calculation on-the-fly
+
+* CSS syntax can get pretty unruly for non-trival sites and styles
+
+
+Introduction to LESS and Sass
+
+* Higher-level style syntaxes that provide advanced CSS features
+
+* Complied into standard CSS before the browser renders the page
+
+* Complied CSS files are uploaded to the production web server
+
+
+What You Need For the Course
+
+* The current versions of the LESS and Sass libraries
+
+* For working with Sass, you need Ruby installed
+	* Macs usually already have this
+
+* For LESS, download a client-side compiler
+	* SimpLESS for Mac and Windows
+
+* Text editor
+
+* Web server
+
+http://lesscss.org
+http://sass-lang.com
