@@ -307,6 +307,31 @@ ops_styles.scss
 * Sass lets you use mathmatical operations and other logic inside your stylesheets.
 
 
+Defining Mixins with Arguments 5.1
+mixargs_styles.scss
+
+EXAMPLE
+
+// using regular arguments
+// takes three agruments: width, color, style
+// inside the mixin is a border definition with nest syntax
+@mixin customBorder ($width, $color, $style) {
+    border: {
+        width: $width;
+        color: $color;
+        style: $style;
+    }
+}
+
+//within #mypara I am passing in the parameters that should be considered for the border
+#mypara {
+    @include customBorder(3px, blue, dotted);
+}
+
+What is great 
+
+
+
 
 
  

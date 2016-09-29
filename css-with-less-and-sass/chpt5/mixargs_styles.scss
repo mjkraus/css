@@ -1,0 +1,25 @@
+/*
+ * Using SASS mixins with arguments
+ */ 
+
+ // using regular arguments
+@mixin customBorder ($width, $color, $style) {
+    border: {
+        width: $width;
+        color: $color;
+        style: $style;
+    }
+}
+
+@mixin customBorder2 ($width: 1px, $color: black, $style: solid) {
+    border: {
+        width: $width;
+        color: $color;
+        style: $style;
+    }
+}
+
+#mypara {
+    @include customBorder2;
+}
+

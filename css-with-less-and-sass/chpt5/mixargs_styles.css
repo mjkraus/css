@@ -1,0 +1,9 @@
+/*
+ * Using SASS mixins with arguments
+ */
+#mypara {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid; }
+
+/*# sourceMappingURL=mixargs_styles.css.map */
