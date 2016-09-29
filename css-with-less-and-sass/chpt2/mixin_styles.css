@@ -1,0 +1,21 @@
+/*
+ * LESS mixins are declared like any other CSS class
+ * and used by including the class name where you want it
+ */
+.commonTraits {
+  border-radius: 10px;
+  border: 1px solid green;
+  padding: 10px;
+}
+header {
+  color: #274D87;
+  border-radius: 10px;
+  border: 1px solid green;
+  padding: 10px;
+}
+footer {
+  color: #3264AF;
+  border-radius: 10px;
+  border: 1px solid green;
+  padding: 10px;
+}

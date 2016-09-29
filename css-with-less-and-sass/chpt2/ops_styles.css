@@ -1,0 +1,10 @@
+/*
+ * LESS Operators example
+ * 
+ * Operators let you perform mathematical functions inside of CSS styles
+ */
+#mypara {
+  color: #ff00ff;
+  border: 6px solid #000000;
+  padding: 10px 30px;
+}

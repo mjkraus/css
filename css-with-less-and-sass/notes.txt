@@ -37,3 +37,130 @@ What You Need For the Course
 
 http://lesscss.org
 http://sass-lang.com
+http://wearekiss.com/simpless
+
+LESS has its own syntax
+
+EXAMPLE
+<link rel="stylesheet/less" type="text/css" href="styles.less">
+	* notice the stylesheet/less fior 
+<script src="../less-1.3.0.min.js"></script>
+
+
+SimpLESS
+
+* Drag and drop project files into the SimpLESS compiler
+	* prefixer - automatically use vendor prefixes for the styles that it generates
+		- You can turn the feature on, on an individual files bases
+			- If you turn it off, it won't generate the prefixes for you
+		- You can also have the code minified
+			- Normally if you are deploying it to the server, you would minify to reduce download times
+		- Love button - mentions SimpLESS in your source code
+	* click on the refresh icons to do an initial compile of these files
+
+* Using the SimpLESS complier you can have the code watched, so everytime you make a change to your LESS the CSS is generated for you
+  you.
+
+
+Using Variables in LESS 2.2
+
+* Variables define placeholders for values that will be used in several places
+
+
+
+Mixins 2.3
+
+Mixins let you define common properties once, then re-use them
+
+EXAMPLE OF A MIXIN
+
+.commonTraits {
+    border-radius: 10px;
+    border: 1px solid green;
+    padding: 10px;
+}
+
+header {
+    color: #274D87;
+    .commonTraits;
+}
+
+footer {
+    color: #3264AF;
+    .commonTraits;
+}
+
+
+
+Using Nest Rules
+
+* Less lets you write nested rules that looks more like the DOM structure
+
+EXAMPLE
+
+.content { - parent element
+	p {
+		(some more styles) - these are nested inside, so they act as the child element
+	}
+	a {
+		(yet more styles)
+		&:hover { - this is the "ampersand selector." This will match up to the parent rule of this pseudo code 
+					selector, so it would say a:hover)
+		}
+	}
+
+}
+
+Write your CSS rules similar to the DOM node structure, so its easier to read and its less verbose.
+
+
+
+Using Operators
+You can use operators to add to the variables that you created in LESS. Look at doc ops_styles.less to see examples
+
+
+Using Mixins With Arguments in LESS 3.1
+more examples in chpt3/mixargs_styles.less
+
+
+* Earlier we learned how to write mixins...
+
+EXAMPLE
+
+@radius: 5px;
+.border-radius {
+	-mox-border-radius: @radius;
+	-webkit-border-radius: @radius;
+	-ms-border-radius: @radius;
+	border-radius: @radius;
+}
+
+BUT you can pass the @radius as an argument
+
+.border-radius (@radius) {
+	-mox-border-radius: @radius;
+	-webkit-border-radius: @radius;
+	-ms-border-radius: @radius;
+	border-radius: @radius;
+}
+
+
+
+Exploring Mixins And Pattern Matching 3.2
+mixpats_styles.less
+	- in this doc the color changes based on using "warning" or "error" 
+	- @_ includes the properties that it has along with those of warning and error
+
+
+Guarded Mixins 3.3
+mixguards_styles.less
+* Guarded mixins are similar to pattern matching, but they match on expressions not simple values
+
+
+
+
+
+
+
+
+	
