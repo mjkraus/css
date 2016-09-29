@@ -1,5 +1,28 @@
 /*
  * Using LESS functions
  * 
- */
-/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
+ *//* This is a mixin */
+h1 {
+  color: #000080;
+}
+h2 {
+  color: #0000e6;
+}
+h3 {
+  color: #1a1aff;
+}
+h4 {
+  color: #4d4dff;
+}
+#mypara {
+  -mox-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  border-color: #6b6bc7;
+  /* the hue function coverts @color into HSL and then that value is then converted again in the hsl function */
+
+  border-width: 2px;
+  border-style: solid;
+  padding: 10px;
+}

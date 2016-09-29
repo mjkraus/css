@@ -167,6 +167,56 @@ EXAMPLE
 then the mixin will be applied.
 
 
+Using Built-In LESS Functions 3.4
+funcs_styles.less
+
+* Color Functions
+
+EXAMPLES
+
+lighten(color, amount)
+
+darken(color, amount)
+
+saturate(color, amount)
+
+desaturate(color, amount)
+
+fadein(color, amount)
+
+fadeout(color, amount)
+
+fade(color, amount)
+
+spin(color, degrees)
+
+mix(color1, color2)
+
+
+* You can also use colors to extract from other colors
+
+hue(color)
+
+saturation(color)
+
+lightness(color)
+
+alpha(color)
+
+
+* ALSO math functions
+
+round(number)
+
+ceil(number)
+
+floor(number)
+
+percentage(number)
+
+
+
+
 
 
 
