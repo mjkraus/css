@@ -145,7 +145,6 @@ BUT you can pass the @radius as an argument
 }
 
 
-
 Exploring Mixins And Pattern Matching 3.2
 mixpats_styles.less
 	- in this doc the color changes based on using "warning" or "error" 
@@ -155,6 +154,21 @@ mixpats_styles.less
 Guarded Mixins 3.3
 mixguards_styles.less
 * Guarded mixins are similar to pattern matching, but they match on expressions not simple values
+
+EXAMPLE
+.text3d(@color) when (lightness(@color)| =<50%) {
+	
+}
+
+* the above example is considered a Guarded Mixin because of the "when" stating that when the condition
+(lightness (@color)| =<50%) is TRUE that is when the mixin will be applied.
+
+* You can put multiple conditions in this mixin and these act as OR statements, so if any of these is evaluated to TRUE
+then the mixin will be applied.
+
+
+
+
 
 
 
