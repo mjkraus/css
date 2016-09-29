@@ -216,6 +216,19 @@ percentage(number)
 
 
 
+Importing External Files
+import_styles.less
+
+* LESS lets you import files into other target stylesheets
+
+* This helps to organize when you are trying to factor out variables from other stylesheets that may make use of them
+or functions that are used more in one place, mixins that are used across your website. You can define these in one file and import them
+into the files in which they are used.
+
+
+
+
+
 
 
 
