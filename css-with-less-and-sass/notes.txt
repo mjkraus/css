@@ -266,6 +266,7 @@ onto your website
 
 
 Using Sass Variables
+var_styles.scss
 * Sass variables are decalred using a $ character and are defined like CSS values
 * Variables canbe one of six different types
 	1. numbers			$myVar: .25in;
@@ -277,11 +278,28 @@ Using Sass Variables
 
 
 Nested Rules in Sass
+nested_styles.scss
 * Sass lets you define nested rules in a format that more clearly mirrors the DOM
 
 
 Using Sass Mixins
-* 
+* Mixins let you define common properties once, then re-use them
+* Sass requires that you use the term @mixin
+
+EXAMPLE
+- Write @mixin, give it the name of the mixin, and then define the properties
+
+@mixin .myMixin {
+	font-size: 18px;
+	background-color: white;
+}
+
+- When you want to use the mixin you use the @include
+
+.myStyle{
+	@include myMixin;
+}
+
  
 
 
