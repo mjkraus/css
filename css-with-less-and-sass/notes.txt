@@ -227,6 +227,64 @@ into the files in which they are used.
 
 
 
+The Sasscommand-line Basics
+* Sass is a CSS preprocessor, that takes code that is written in a certain syntax, and cnoverts it into offcial CSS before you upload it 
+onto your website
+
+* There are two options for Sass:
+	1. SCSS - is a superset of CSS3 syntax. Meaning that if you write a stylesheet in CSS3 it is valid in SCSS as well.
+	2. Indented Syntax - Older version when Sass came along, if you have used HAML or Python you are familiar with the syntax, but
+	it is no longer the primary format.
+		* File extension is .sass
+
+* Need to learn how to use Sass with the command-line. Unlike LESS it doesnt have a GUI.
+* Command line converts SCSS code to CSS
+	COMMAND FOR HELP
+		sass -?
+
+	COMMAND FOR CONVERTING
+	*takes an scss file and converts it to css
+		sass --update FILE NAME
+			EXAMPLE
+			sass --update var_styles.scss
+
+			*You can also define what you want the output of the converted file name to be
+			EXAMPLE
+			sass --update var_styles.scss:mysheet.css
+
+			*You can also convert all the files in entire directories
+			EXAMPLE
+			sass --update Ch4:Ch4
+
+		sass --watch
+			* Constantly updating these files is annoying, so that is why you can set "watch" on them,
+			Sass initially converts the files and puts a watch on them so they update when there are changes
+			to the files
+
+			EXAMPLE
+			sass --watch ch5:ch5
+
+
+Using Sass Variables
+* Sass variables are decalred using a $ character and are defined like CSS values
+* Variables canbe one of six different types
+	1. numbers			$myVar: .25in;
+	2. strings			$myStr: " some piece of text";
+	3. colors			$myColor: blue;
+	4. booleans			$myBool: false;
+	5. nulls			$myVar: null;
+	6. lists 			$myList: 1px solid black;
+
+
+Nested Rules in Sass
+* Sass lets you define nested rules in a format that more clearly mirrors the DOM
+
+
+
+
+
+
+
 
 
 
