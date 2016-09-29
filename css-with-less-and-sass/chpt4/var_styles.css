@@ -1,0 +1,8 @@
+/* 
+ * SASS Variables are defined with a $ character
+ * and can have different kinds of data types: color, string, boolean, multi-value
+ */
+h1, h2 {
+  color: navy; }
+
+/*# sourceMappingURL=var_styles.css.map */
